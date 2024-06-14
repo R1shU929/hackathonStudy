@@ -1,20 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-let Bk = styled.div`
-  width: 50%;
-  height: 50%;
-  padding: 50%;
-  background-color: red;
-`;
-
 function App() {
   return (
-    <Bk>
+    <Wrapper>
       Hello World!
-    </Bk>
+    </Wrapper>
   );
 }
 
 export default App;
 
+
+const Wrapper = styled.div`
+font-size: 50px;
+color: #ff8297;
+height: 50vh;
+background-color: beige;
+display: flex;
+align-items: center;
+justify-content: center;
+`;
