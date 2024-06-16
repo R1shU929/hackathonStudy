@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-function App() {
+function Home() {
   return (
     <Wrapper>
       Hello World!
@@ -9,7 +8,7 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
 
 
 const Wrapper = styled.div`
