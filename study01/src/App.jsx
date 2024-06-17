@@ -6,9 +6,9 @@ function App() {
   const RouterObject = createBrowserRouter(router);
   // 세상밖에 나오게 라우터오브젝트로 만들어줌
   return (
-    <div>
+    <Wrapper>
         <RouterProvider router={RouterObject}/> 
-    </div>
+    </Wrapper>
   );
 }
 
