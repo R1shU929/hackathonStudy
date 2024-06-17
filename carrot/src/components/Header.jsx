@@ -46,10 +46,9 @@ const Wrapper = styled.div`
     align-items: center;
 `
 const Head = styled.div`
-    width:70vw;
+    width:80vw;
     margin-top:15px;
     margin-bottom:15px;
- 
     position:sticky;
     display: flex;
     justify-content: space-between;
@@ -60,19 +59,13 @@ const HeadLeft = styled.div`
     align-items: center;
 `
 const Logo = styled.img`
-
     size: 40px;
 `
 const Used = styled.div`
-
-
 color: #383838;
 `
 const Search = styled.form`
-
-display: flex;
-
-    
+display: flex; 
 `
 const SearchBox = styled.input`
     border:0px;
@@ -81,13 +74,13 @@ const SearchBox = styled.input`
     border-radius:6px;
     
     padding-left: 10px;
-    padding-right:26px;
+    padding-right:50px;
     background-color: rgba(0,0,0,0.05);
     font-size: 16px;
     &::placeholder{
         color: #8080809f
     }
-    
+    &:focus {outline: none;}
 `
 
 const SearchBt = styled.input`
