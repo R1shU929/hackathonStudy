@@ -1,12 +1,12 @@
-import Header from "./components/Header"
-import Market from "./pages/market/market"
+import { RouterProvider,createBrowserRouter} from 'react-router-dom';
 import './App.css'
+import router from './Routes/router';
 
 function App() {
+  const RouterObject = createBrowserRouter(router);
   return (
     <>
-    <Header/>
-    <Market/>
+    <RouterProvider router = {RouterObject}/>
     </>
   )
 }

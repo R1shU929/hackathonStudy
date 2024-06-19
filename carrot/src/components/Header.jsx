@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import Logoimg from '../assets/logo.png'
+import {Outlet} from 'react-router-dom'
+
 
 function Header(){
 
@@ -8,6 +10,7 @@ function Header(){
      * 2. display flex, justify-contents space between로 둘이 밀어서 만들자.
      */
     return (
+        <>        
         <Wrapper>
     <Head>
         <HeadLeft>
@@ -35,6 +38,9 @@ function Header(){
         </Search>
 </Head>
 </Wrapper>
+<Outlet/>
+</>
+
     );
 }
 
@@ -44,12 +50,15 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position:sticky;
+    background-color: white;
+    top: 0;
 `
 const Head = styled.div`
-    width:80vw;
+    width:60vw;
     margin-top:15px;
     margin-bottom:15px;
-    position:sticky;
+    
     display: flex;
     justify-content: space-between;
 `

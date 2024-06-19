@@ -4,7 +4,7 @@ import Itembox from './components/itembox';
 
 function Market(){
     const testArr = [1,2,3,4,5,6,7,8,9,10,11,12]
-
+    console.log('마켓 너 나오고있니?')
     return(
         <>
     <Banner src={Bannerimg} alt="bannerimg"/> 
@@ -49,7 +49,7 @@ const Box = styled.div`
 `
 const Hot = styled.h1`
     width: 100%;
-    margin-top:50px;
+    margin-top:60px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
