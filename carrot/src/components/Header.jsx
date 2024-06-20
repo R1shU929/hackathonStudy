@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Logoimg from '../assets/logo.png'
 import {Outlet} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 function Header(){
@@ -14,12 +15,14 @@ function Header(){
         <Wrapper>
     <Head>
         <HeadLeft>
+        <Link0 to = '/'>
         <Logo src={Logoimg} alt="logoimg"/>
+        </Link0>
         <Used>
             중고거래
         </Used>
         <Used>
-            동네업체
+            <Link0 to ="/nearby-stores">동네업체</Link0>
         </Used>
         <Used>
             알바
@@ -107,4 +110,8 @@ const SearchBt = styled.input`
         transition:0.3s;
         color: #2a2a2ac3;
     }
+`
+
+const Link0 = styled(Link)`
+    color: #383838;
 `

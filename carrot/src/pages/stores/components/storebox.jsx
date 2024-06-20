@@ -1,19 +1,22 @@
 import styled from "styled-components";
 import Foximg from "../../../assets/fox.png";
 
-function Storebox(){
+function Storebox(
+    {props}
+){
+    console.log(props.title);
     return(
         <Container>
         <Wrapper>
             <Profile src={Foximg} alt="Profileimg"/>
             <Storewd>
                 <StoreWrap>
-                <StoreName>팍스의 연애상담소</StoreName>
-                <StoreAddress>사랑동 </StoreAddress>
+                <StoreName>{props.title}</StoreName>
+                <StoreAddress>{props.place} </StoreAddress>
                 </StoreWrap>
-                <StoreExplain> 칭구들 모든 고민 다 들어주게쏘!
+                <StoreExplain> {props.contents}
                     </StoreExplain>
-                <StoreCategory> 후기 100 . 단골 185 . 고민상담
+                <StoreCategory> {props.review}
                     </StoreCategory>
             </Storewd>
         </Wrapper>
@@ -49,12 +52,12 @@ const Storewd = styled.div`
 
 `
 const StoreWrap = styled.div`
-    width:200px;
+    width:220px;
     display: flex;
 `
 const StoreName = styled.h3`
     margin-left: 10px;
-    width:140px;
+    width:200px;
     padding-top: 4px;
 `
 const StoreAddress = styled.div`

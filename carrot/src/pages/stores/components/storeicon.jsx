@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import Storebox from "./storebox";
 function StoreIcon (){
+    const IconArr = ["전체","식당","카페","용달/이사","뷰티/미용","헬스/필라테스/요가"];
     return(
         <Iconbox>
-        <Icon type="Button" value="전체"/>
-        <Icon type="Button" value="식당"/>
-        <Icon type="Button" value="카페"/>
-        <Icon type="Button" value="용달/이사"/>
-        <Icon type="Button" value="뷰티/미용"/>
-        <Icon type="Button" value="헬스/필라테스/요가"/>
+        {
+            IconArr.map((yoon)=><Icon type="Button" value={yoon} key={yoon}/>
+            // key는 웹사이트에서 알아보려고 넣는 값
+        )
+            }
         </Iconbox>
     );
 }
