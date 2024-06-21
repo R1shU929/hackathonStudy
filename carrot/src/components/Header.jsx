@@ -28,7 +28,7 @@ function Header(){
             <Link0 to ="/event">이벤트</Link0>
         </Used>
         <Used>
-            부동산
+            <Link0 to ="/member">멤버</Link0>
         </Used>
         <Used>
             중고차 직거래

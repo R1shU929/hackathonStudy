@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Market from '../pages/market/market'
 import EventPage from "../pages/event/eventpage";
 import Home from "../pages/home/home";
+import Member from "../pages/member/member";
 
 
 const router = ([
@@ -28,9 +29,13 @@ const router = ([
                     path:'/event',
                     element:<EventPage/>
                 }
+                ,
+                {
+                    path:'/member',
+                    element:<Member/>
+                }
             ]
         }
         
     ])
-
 export default router;

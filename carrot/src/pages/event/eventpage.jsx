@@ -16,7 +16,6 @@ function EventPage(){
     }
     const reset = () =>
     {
-        console.log('reset 실행중이니 ㅜㅜㄴ')
         setCount (0);
     }
     return(
