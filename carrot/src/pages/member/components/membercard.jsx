@@ -47,7 +47,7 @@ const Memberimg = styled.img`
     border-radius:100%;
 `
 
-const MemberName = styled.div`
+const MemberName = styled.b`
     width:200px;
 `
 const MemberPart = styled.div`
