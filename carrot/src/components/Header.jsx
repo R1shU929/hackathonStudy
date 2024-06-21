@@ -19,13 +19,13 @@ function Header(){
         <Logo src={Logoimg} alt="logoimg"/>
         </Link0>
         <Used>
-            중고거래
+        <Link0 to ="/fleamarket">중고거래</Link0>
         </Used>
         <Used>
             <Link0 to ="/nearby-stores">동네업체</Link0>
         </Used>
         <Used>
-            알바
+            <Link0 to ="/event">이벤트</Link0>
         </Used>
         <Used>
             부동산
