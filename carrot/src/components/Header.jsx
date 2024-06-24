@@ -31,7 +31,7 @@ function Header(){
             <Link0 to ="/member">멤버</Link0>
         </Used>
         <Used>
-            중고차 직거래
+        <Link0 to ="/api">통신</Link0>
         </Used>
         </HeadLeft>
         <Search class="search-box" action="" method="get">

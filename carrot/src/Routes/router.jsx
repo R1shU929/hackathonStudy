@@ -4,6 +4,7 @@ import Market from '../pages/market/market'
 import EventPage from "../pages/event/eventpage";
 import Home from "../pages/home/home";
 import Member from "../pages/member/member";
+import Api from "../pages/api";
 
 
 const router = ([
@@ -33,6 +34,10 @@ const router = ([
                 {
                     path:'/member',
                     element:<Member/>
+                },
+                {
+                    path:'/api',
+                    element:<Api/>
                 }
             ]
         }
