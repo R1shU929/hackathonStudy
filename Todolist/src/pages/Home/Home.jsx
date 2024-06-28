@@ -25,6 +25,11 @@ const onClickAdd = () =>{
   setText("");
   
 }
+ const onClickConfirm = () => {
+ alert(todos.map((en)=>{ // en 이라고 이름 붙인 객체를 map. 즉 반복하겠다 !
+ return en.content
+ }))
+ }
   return (
     <Box>
     <Wrapper>
@@ -39,7 +44,7 @@ const onClickAdd = () =>{
     {/* 
       prop는 왼쪽은 보내는 이름 , 오른쪽은 보낼 값 이런 형식
     */}
-    <ListBt type="Button" value="할 일 확정"/>
+    <ListBt onClick={onClickConfirm} type="Button" value="할 일 확정"/>
     </Wrapper>
     </Box>
   );
