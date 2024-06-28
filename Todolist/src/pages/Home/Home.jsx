@@ -3,18 +3,27 @@ import styled from 'styled-components';
 import List from './components/list';
 
 function Home() {
-  const [text, setText] = useState('');
-  const [todos,SetTodos] = useState([]);
+  const [text, setText] = useState(''); // 인풋 value 값 저장
+  const [todos,SetTodos] = useState([]); // 실제 데이터 값 저장
 
 const onChangeInput = (e) => {
-  setText(e.target.value);
+  //onChange는 input값넣을때마가 실행됨
+  setText(e.target.value); // 
 };
 
-const onChangeClick = () =>{
+const onClickAdd = () =>{
+  if(text.trim() === '') return //얼리리턴은 함수 나가버림 그냥 뒤에 코드는 무시함
+  //trim은 그 문자열의 공백을 싹 없애준다. 즉 's t r i n g' => 's t r i n g'.trim() => 'string'
+
+  
   const todoNew = {content: text}
+  console.log(...todos)
+
   SetTodos([
     ...todos,todoNew
   ])
+  setText("");
+  
 }
   return (
     <Box>
@@ -22,10 +31,14 @@ const onChangeClick = () =>{
     <h1>To Do List!</h1>
     <Search class="search-box" action="" method="get">
             <SearchBox onChange={onChangeInput} value={text} type='text' name='' placeholder='할 일 추가하기'/>
-            <SearchBt onClick={onChangeClick} value="추가">
+            <SearchBt onClick={onClickAdd} value="추가">
             </SearchBt>
         </Search>
-    <List td={todos}/>
+    
+    <List todos={todos} SetTodos={SetTodos}/> 
+    {/* 
+      prop는 왼쪽은 보내는 이름 , 오른쪽은 보낼 값 이런 형식
+    */}
     <ListBt type="Button" value="할 일 확정"/>
     </Wrapper>
     </Box>

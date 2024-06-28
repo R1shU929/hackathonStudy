@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
-function List ({td}) {
-    console.log(td);
+function List ({todos, SetTodos}) {
+    //props td라는 이름과 SetTodos라는 이름으로 props가 왔다. 그거를 처음에 항상 중괄호로 받아준다.
+
+    const onClickDelete =(props)=>{
+        const tdFilter = todos.filter((todos)=> todos.content !== props)
+        SetTodos(tdFilter)
+   
+    }
     return(
         <Wrapper>
-            {td.map((todo,idx)=>{
-                return<li key={idx}>{todo.content}</li>
+            {todos.map((todo,idx)=>{
+                return<li key={idx}>{todo.content}<DeleteBt type="Button" onClick={()=>onClickDelete(todo.content)} value="삭제"/></li>
             })}
-            {/* <ol>
-                <Num>빨래<DeleteBt type="Button" value="삭제"/></Num>
-                <Num>청소<DeleteBt type="Button" value="삭제"/></Num>
-                <Num>코딩<DeleteBt type="Button" value="삭제"/></Num>
-            </ol> */}
         </Wrapper>
     )
 }
@@ -26,7 +27,4 @@ const Wrapper = styled.div`
 const DeleteBt = styled.input`
     margin-left: 10px;
     margin-top: 0;
-`
-const Num = styled.li`
-    display: flex;
 `
