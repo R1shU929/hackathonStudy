@@ -1,30 +1,34 @@
 import styled from "styled-components";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import NewYork from  "../../../assets/NewYork.jpeg";
+import Paris from "../../../assets/Paris.jpeg";
+import Tokyo from   "../../../assets/Tokyo.webp";
 
 function  CityCard(){
 
     const city = [{
      cityname: "NewYork",
-     cityimg: "../../../assets/NewYork.jpeg"
+     cityimg: NewYork
     },
     {
         cityname: "Paris",
-        cityimg: "../../../assets/Paris.jpeg"
+        cityimg: Paris
        }
        ,
        {
         cityname: "Tokyo",
-        cityimg: "../../../assets/Tokyo.webp"
+        cityimg: Tokyo
        }]
 
     return(
         <Wrapper>
-           <Link1 to ="/detailweather">
             {
-                city.map((item,idx)=><Img key={idx} props={item}/>
+                city.map((item,idx)=>
+                <Link1 to ="/detailweather"><Img key={idx} src={item.cityimg}/>
+
+            </Link1> 
                 )
                }
-            </Link1> 
         </Wrapper>
     )
 }
@@ -46,6 +50,5 @@ const Img = styled.img`
     transition: 0.5s;
 `
 const Link1 = styled(Link)`
-    
 `
 
