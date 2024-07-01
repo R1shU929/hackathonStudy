@@ -5,6 +5,8 @@ import EventPage from "../pages/event/eventpage";
 import Home from "../pages/home/home";
 import Member from "../pages/member/member";
 import Api from "../pages/api";
+import Weather from "../pages/weather/weather";
+import Detailweather from "../pages/weather/detailweather";
 
 
 const router = ([
@@ -38,6 +40,14 @@ const router = ([
                 {
                     path:'/api',
                     element:<Api/>
+                },
+                {
+                    path:'/weather',
+                    element:<Weather/>
+                },
+                {
+                    path:'/detailweather',
+                    element:<Detailweather/>
                 }
             ]
         }
