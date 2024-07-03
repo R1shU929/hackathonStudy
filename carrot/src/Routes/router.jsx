@@ -7,6 +7,7 @@ import Member from "../pages/member/member";
 import Api from "../pages/api";
 import Weather from "../pages/weather/weather";
 import Detailweather from "../pages/weather/detailweather";
+import Order from "../pages/order/order";
 
 
 const router = ([
@@ -48,6 +49,10 @@ const router = ([
                 {
                     path:'/weather/:cityname',
                     element:<Detailweather/>
+                },
+                {
+                    path:'/order',
+                    element:<Order/>
                 }
             ]
         }

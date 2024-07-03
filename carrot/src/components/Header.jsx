@@ -36,6 +36,9 @@ function Header(){
         <Used>
         <Link0 to ="/weather">날씨</Link0>
         </Used>
+        <Used>
+        <Link0 to ="/order">발주</Link0>
+        </Used>
         </HeadLeft>
         <Search class="search-box" action="" method="get">
             <SearchBox class="search-txt" type='text' name='' placeholder='물품이나 동네를 검색해보세요'/>
@@ -61,7 +64,7 @@ const Wrapper = styled.div`
     top: 0;
 `
 const Head = styled.div`
-    width:60vw;
+    width:80vw;
     margin-top:15px;
     margin-bottom:15px;
     
