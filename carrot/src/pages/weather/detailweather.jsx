@@ -155,7 +155,7 @@ const Cloud = styled.img`
     width: 200px;
   }
   to {
-    top:30px;
+    top:20px;
   } 
 }
 position: relative;
@@ -177,7 +177,7 @@ const Cloud1 = styled.img`
     width: 200px;
   }
   to {
-    bottom:30px;
+    bottom:20px;
   } 
 }
 animation:cloud 2s ease-in Infinite Alternate;
