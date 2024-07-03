@@ -46,7 +46,7 @@ const router = ([
                     element:<Weather/>
                 },
                 {
-                    path:'/detailweather',
+                    path:'/weather/:cityname',
                     element:<Detailweather/>
                 }
             ]

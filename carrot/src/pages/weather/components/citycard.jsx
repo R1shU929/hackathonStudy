@@ -7,7 +7,7 @@ import Tokyo from   "../../../assets/Tokyo.webp";
 function  CityCard(){
 
     const city = [{
-     cityname: "NewYork",
+     cityname: "New york",
      cityimg: NewYork
     },
     {
@@ -17,14 +17,16 @@ function  CityCard(){
        ,
        {
         cityname: "Tokyo",
+        
         cityimg: Tokyo
        }]
 
+       
     return(
         <Wrapper>
             {
                 city.map((item,idx)=>
-                <Link1 to ="/detailweather"><Img key={idx} src={item.cityimg}/>
+                <Link1 to ={item.cityname}><Img key={idx} src={item.cityimg}/>
 
             </Link1> 
                 )
